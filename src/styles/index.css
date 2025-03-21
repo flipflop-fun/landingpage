@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #FF4D4D;
+  --secondary: #4A4FFF;
+  --accent: #FFD700;
+  --background: #f0f0f0;
+}
+
+body {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.neo-brutalism {
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0.5rem;
+}
+
+.neo-brutalism:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #000;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Section Background Colors */
+.hero-section {
+  background-color: #FFF8F0;
+}
+
+.features-section {
+  background-color: #FFF4E6;
+}
+
+.how-it-works-section {
+  background-color: #FFF0DC;
+}
+
+/* 自定义背景图案 */
+.hero-pattern {
+  background-color: #FFF8F0;
+  background-image: 
+    linear-gradient(30deg, #000 1px, transparent 1px),
+    linear-gradient(-30deg, #000 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+}
+
+.features-pattern {
+  background-color: #FFF4E6;
+  background-image: 
+    radial-gradient(circle at 1px 1px, #000 2px, transparent 0);
+  background-size: 30px 30px;
+}
+
+.how-it-works-pattern {
+  background-color: #FFF0DC;
+  background-image: 
+    linear-gradient(0deg, transparent 24%, 
+      rgba(0, 0, 0, 0.2) 25%, 
+      rgba(0, 0, 0, 0.2) 26%, 
+      transparent 27%, 
+      transparent 74%, 
+      rgba(0, 0, 0, 0.2) 75%, 
+      rgba(0, 0, 0, 0.2) 76%, 
+      transparent 77%, 
+      transparent),
+    linear-gradient(90deg, transparent 24%, 
+      rgba(0, 0, 0, 0.2) 25%, 
+      rgba(0, 0, 0, 0.2) 26%, 
+      transparent 27%, 
+      transparent 74%, 
+      rgba(0, 0, 0, 0.2) 75%, 
+      rgba(0, 0, 0, 0.2) 76%, 
+      transparent 77%, 
+      transparent);
+  background-size: 50px 50px;
+}
+
+@font-face {
+  font-family: 'RetroPixelArcade';
+  src: url('../asserts/fonts/retro-pixel-arcade.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 50;
+}
+
+.logo img {
+  width: 48px;
+  height: 48px;
+}
+
+.logo-text {
+  font-family: 'RetroPixelArcade', sans-serif;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Social Links */
+.social-link {
+  border: 2px solid #000;
+  position: relative;
+  background: white;
+  border-radius: 50%;
+}
+
+.social-link::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: -4px;
+  bottom: -4px;
+  background: #000;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+/* Social Links Section */
+.social-links-pattern {
+  background-color: #FFEBCC;
+  background-image: 
+    linear-gradient(45deg, #000 1px, transparent 1px),
+    linear-gradient(-45deg, #000 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-position: center center;
+  position: relative;
+  isolation: isolate;
+}
+
+.social-links-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: -1;
+}
