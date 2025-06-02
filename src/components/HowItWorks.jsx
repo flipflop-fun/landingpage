@@ -199,13 +199,16 @@ export const HowItWorks = () => {
             <p className="text-xl mb-6 opacity-90">
               Join the revolution of fair and secure token creation
             </p>
-            <motion.button
+            <motion.a
+              href="https://test.flipflop.plus"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="pixel-btn bg-white text-primary-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
             >
               Start Building
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </div>
