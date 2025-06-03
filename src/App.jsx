@@ -4,7 +4,7 @@ import { Features } from './components/Features';
 import { HowItWorks } from './components/HowItWorks';
 import { SocialLinks } from './components/SocialLinks';
 import { Logo } from './components/Logo';
-import ThemeToggle from './components/ThemeToggle'; // 修改为默认导入
+import ThemeToggle from './components/ThemeToggle'; 
 import { PATTERNS } from './constants/patterns';
 
 function App() {

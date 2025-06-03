@@ -5,7 +5,7 @@ import { FaRocket, FaShieldAlt, FaCoins, FaUsers } from 'react-icons/fa';
 const Hero = () => {
   return (
     <section className="hero-pattern min-h-screen flex items-center justify-center px-4 py-20 pt-32 relative overflow-hidden">
-      {/* 背景装饰元素 */}
+      
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute top-20 left-10 w-16 h-16 border-4 border-primary-500 rotate-45"
@@ -25,7 +25,7 @@ const Hero = () => {
       </div>
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
-        {/* 主标题 */}
+        
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* 副标题 */}
+        
         <motion.p
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -51,7 +51,7 @@ const Hero = () => {
           minting participation levels, ensuring true fairness and preventing Sybil attacks.
         </motion.p>
 
-        {/* 特性亮点 */}
+        
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -78,7 +78,7 @@ const Hero = () => {
           ))}
         </motion.div>
 
-        {/* 行动按钮 */}
+        
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -97,7 +97,7 @@ const Hero = () => {
           </motion.a>
         </motion.div>
 
-        {/* 滚动提示 */}
+        
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

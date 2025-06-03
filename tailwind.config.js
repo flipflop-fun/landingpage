@@ -4,11 +4,11 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class', // 启用深色模式
+  darkMode: 'class', 
   theme: {
     extend: {
       colors: {
-        // 主色调
+        
         primary: {
           50: '#fff1f1',
           100: '#ffe1e1',
@@ -33,7 +33,7 @@ export default {
           700: '#ebb935',
           900: '#d4a017',
         },
-        // 深色模式颜色
+        
         dark: {
           bg: '#0a0a0a',
           surface: '#1a1a1a',
@@ -41,7 +41,7 @@ export default {
           text: '#ffffff',
           'text-secondary': '#cccccc',
         },
-        // 浅色模式颜色
+        
         light: {
           bg: '#ffffff',
           surface: '#f8f9fa',

@@ -47,7 +47,7 @@ export const SocialLinks = () => {
           ))}
         </div>
         
-        {/* Footer 信息 */}
+        
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
           <p className="text-gray-600 dark:text-gray-400 text-sm">
             © 2025 Proof of Mint. All rights reserved.

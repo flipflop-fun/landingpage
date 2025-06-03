@@ -36,7 +36,7 @@ const FeatureCard = ({ icon: Icon, title, description, delay = 0 }) => (
       {description}
     </p>
     
-    {/* 装饰性元素 */}
+    
     <div className="absolute top-4 right-4 w-2 h-2 bg-accent-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
   </motion.div>
 );
@@ -91,7 +91,7 @@ const Features = () => {
   return (
     <section id="features" className="features-pattern py-20 px-4 relative">
       <div className="max-w-7xl mx-auto">
-        {/* 问题解决部分 */}
+        
         <div className="mb-20">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
@@ -119,7 +119,7 @@ const Features = () => {
           </div>
         </div>
 
-        {/* 机制特性部分 */}
+        
         <div>
           <motion.div
             initial={{ y: 30, opacity: 0 }}
@@ -147,7 +147,7 @@ const Features = () => {
           </div>
         </div>
 
-        {/* 统计数据 */}
+        
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

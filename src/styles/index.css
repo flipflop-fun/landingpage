@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 字体导入 */
+
 @font-face {
   font-family: 'RetroPixelArcade';
   src: url('../asserts/fonts/retro-pixel-arcade.ttf') format('truetype');
@@ -17,7 +17,7 @@
   font-style: normal;
 }
 
-/* CSS变量 */
+
 :root {
   --primary: #FF4D4D;
   --secondary: #4A4FFF;
@@ -37,7 +37,7 @@
   --border: #333333;
 }
 
-/* 基础样式 */
+
 * {
   box-sizing: border-box;
 }
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'RetroPixelArcade', 'Archivo Black', sans-serif;
 }
 
-/* Neo-Brutalism 样式 */
+
 .neo-brutalism {
   border: 3px solid #000;
   box-shadow: 5px 5px 0px #000;
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 7px 7px 0px #fff;
 }
 
-/* 渐变文字 */
+
 .gradient-text {
   background: linear-gradient(45deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 
-/* 像素风格按钮 */
+
 .pixel-button {
   font-family: 'RetroPixelArcade', monospace;
   border: 4px solid #000;
@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 2px 2px 0px #fff;
 }
 
-/* 背景图案 */
+
 .hero-pattern {
   background-color: var(--background);
   background-image: 
@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 50px 50px;
 }
 
-/* 深色模式下的背景图案调整 */
+
 .dark .how-it-works-pattern {
   background-image: 
     linear-gradient(0deg, transparent 24%, 
@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
       transparent);
 }
 
-/* 卡片样式 */
+
 .feature-card {
   background: var(--surface);
   border: 3px solid var(--border);
@@ -206,7 +206,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
 }
 
-/* 响应式字体大小 */
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
@@ -228,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* 滚动条样式 */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -246,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--secondary);
 }
 
-/* 加载动画 */
+
 .loading-dots {
   display: inline-block;
 }
@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
   60%, 100% { content: '...'; }
 }
 
-/* 工具提示 */
+
 .tooltip {
   position: relative;
   display: inline-block;

@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
 const ThemeToggle = () => {
-  const [isDark, setIsDark] = useState(true); // 默认设置为深色模式
+  const [isDark, setIsDark] = useState(true); 
 
   useEffect(() => {
-    // 默认应用深色主题
+    
     document.documentElement.classList.add('dark');
     
-    // 检查本地存储中的主题偏好
+    
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       const isDarkTheme = savedTheme === 'dark';
@@ -20,19 +20,19 @@ const ThemeToggle = () => {
         document.documentElement.classList.remove('dark');
       }
     } else {
-      // 如果没有保存的主题偏好，检查系统主题偏好，但默认仍为深色
+      
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       const prefersDark = mediaQuery.matches;
       
-      // 如果系统偏好浅色且用户没有设置过主题，则使用系统偏好
-      // 否则保持深色默认
+      
+      
       if (!prefersDark) {
         setIsDark(false);
         document.documentElement.classList.remove('dark');
       }
     }
 
-    // 监听系统主题变化（仅在用户没有手动设置过主题时生效）
+    
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e) => {
       const savedTheme = localStorage.getItem('theme');
@@ -54,7 +54,7 @@ const ThemeToggle = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);
     
-    // 保存用户的主题偏好到本地存储
+    
     localStorage.setItem('theme', newTheme ? 'dark' : 'light');
     
     if (newTheme) {
