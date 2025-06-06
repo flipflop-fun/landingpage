@@ -373,3 +373,13 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   z-index: -1;
 }
+
+.pixel-button-secondary {
+  @apply border-2 border-brand-500 text-brand-500 px-8 py-4 text-lg font-bold;
+  /* Add other pixel button base styles if not inherited */
+  transition: all 0.2s ease-in-out;
+}
+
+.pixel-button-secondary:hover {
+  @apply bg-brand-500 text-white;
+}

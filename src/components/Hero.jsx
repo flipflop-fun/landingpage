@@ -83,17 +83,27 @@ const Hero = () => {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="flex justify-center items-center"
+          className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4"
         >
           <motion.a
             href="https://test.flipflop.plus"
             target="_blank"
             rel="noopener noreferrer"
-            className="pixel-button bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 text-lg font-bold"
+            className="pixel-button bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 text-lg font-bold"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Start Building
+          </motion.a>
+          <motion.a
+            href="https://docsend.com/view/r9rz54y2ggvwny4j"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pixel-button-secondary border-2 border-brand-500 text-brand-500 hover:bg-brand-500 hover:text-white px-8 py-4 text-lg font-bold"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Read Whitepaper
           </motion.a>
         </motion.div>
 
