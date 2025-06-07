@@ -93,7 +93,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Start Building
+            Start Buidling
           </motion.a>
           <motion.a
             href="https://docsend.com/view/r9rz54y2ggvwny4j"

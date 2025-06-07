@@ -207,7 +207,7 @@ export const HowItWorks = () => {
               whileTap={{ scale: 0.95 }}
               className="pixel-btn bg-white text-primary-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
             >
-              Start Building
+              Start Buidling
             </motion.a>
           </div>
         </motion.div>
