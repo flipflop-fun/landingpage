@@ -86,7 +86,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4"
         >
           <motion.a
-            href="https://test.flipflop.plus"
+            href="https://app.flipflop.plus"
             target="_blank"
             rel="noopener noreferrer"
             className="pixel-button bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 text-lg font-bold"

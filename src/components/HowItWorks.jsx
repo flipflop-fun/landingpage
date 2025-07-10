@@ -200,7 +200,7 @@ export const HowItWorks = () => {
               Join the revolution of fair and secure token creation
             </p>
             <motion.a
-              href="https://test.flipflop.plus"
+              href="https://app.flipflop.plus"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
