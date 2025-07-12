@@ -9,6 +9,11 @@ const socialLinks = [
     url: 'https://x.com/flipfloplaunch'
   },
   {
+    name: 'Discord',
+    icon: FaDiscord,
+    url: ' https://discord.gg/DtwkgAyD'
+  },
+  {
     name: 'Telegram',
     icon: FaTelegram,
     url: 'https://t.me/flipflopEng'
