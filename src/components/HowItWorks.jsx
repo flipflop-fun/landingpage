@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaRocket, FaUsers, FaShieldAlt, FaChartLine, FaCode, FaLock } from 'react-icons/fa';
+import { FaRocket, FaUsers, FaShieldAlt, FaChartLine, FaCode, FaLock, FaFileAlt, FaCheckCircle } from 'react-icons/fa';
+import zanLogo from '../asserts/zan-logo.png';
 
 export const HowItWorks = () => {
   const workflowSteps = [
@@ -37,9 +38,15 @@ export const HowItWorks = () => {
   const technicalFeatures = [
     {
       title: "Smart Contract Security",
-      description: "Audited contracts with built-in protection mechanisms",
+      description: "Professional audited contracts with built-in protection mechanisms",
       icon: FaLock,
-      features: ["Rug-pull protection", "Automated security checks", "Transparent code"]
+      features: ["Rug-pull protection", "Automated security checks", "Transparent code"],
+      isAudited: true,
+      audit: {
+        company: "ZAN",
+        projectName: "flipflop_proof_of_mint",
+        reportUrl: "https://mdn.alipayobjects.com/huamei_uqxdlc/afts/file/CgRiQ4hn2HQAAAAAgCAAAAgADjCYAQFr/fair_mint_token-final-report.pdf"
+      }
     },
     {
       title: "Advanced Tokenomics",
@@ -159,23 +166,62 @@ export const HowItWorks = () => {
                   key={index}
                   variants={itemVariants}
                   whileHover={{ scale: 1.02 }}
-                  className="neo-brutalism bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-lg"
+                  className={`neo-brutalism bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-lg ${feature.isAudited ? 'ring-2 ring-green-400 dark:ring-green-500' : ''}`}
                 >
-                  <div className="flex items-center mb-6">
-                    <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
-                      <IconComponent className="text-2xl text-primary-600 dark:text-primary-400" />
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center">
+                      <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-lg mr-4">
+                        <IconComponent className="text-2xl text-primary-600 dark:text-primary-400" />
+                      </div>
+                      <h4 className="text-2xl font-bold text-gray-800 dark:text-white">
+                        {feature.title}
+                      </h4>
                     </div>
-                    <h4 className="text-2xl font-bold text-gray-800 dark:text-white">
-                      {feature.title}
-                    </h4>
+                    {feature.isAudited && (
+                      <div className="flex items-center bg-green-100 dark:bg-green-900/30 px-3 py-1.5 rounded-full">
+                        <FaCheckCircle className="text-green-500 mr-2" />
+                        <span className="text-sm font-semibold text-green-700 dark:text-green-400">Audited</span>
+                      </div>
+                    )}
                   </div>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">
                     {feature.description}
                   </p>
+                  
+                  {/* ZAN Audit Badge Section */}
+                  {feature.isAudited && feature.audit && (
+                    <motion.a
+                      href={feature.audit.reportUrl}
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      className="block mb-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-colors cursor-pointer group"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <img 
+                            src={zanLogo} 
+                            alt="ZAN" 
+                            className="h-6 object-contain"
+                          />
+                          <div className="h-4 w-px bg-purple-300 dark:bg-purple-600"></div>
+                          <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">
+                            {feature.audit.projectName}
+                          </span>
+                        </div>
+                        <div className="flex items-center text-purple-600 dark:text-purple-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                          <FaFileAlt className="mr-1.5" />
+                          <span>Audit Report</span>
+                        </div>
+                      </div>
+                    </motion.a>
+                  )}
+                  
                   <div className="grid grid-cols-1 gap-3">
                     {feature.features.map((item, idx) => (
                       <div key={idx} className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                        <span className="w-2 h-2 bg-accent-500 rounded-full mr-3"></span>
+                        <span className={`w-2 h-2 ${feature.isAudited ? 'bg-green-500' : 'bg-accent-500'} rounded-full mr-3`}></span>
                         <span className="text-gray-700 dark:text-gray-200">{item}</span>
                       </div>
                     ))}
