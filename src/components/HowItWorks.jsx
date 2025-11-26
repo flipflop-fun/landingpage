@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaRocket, FaUsers, FaShieldAlt, FaChartLine, FaCode, FaLock, FaFileAlt, FaCheckCircle } from 'react-icons/fa';
-import zanLogo from '../asserts/zan-logo.png';
+import zanLogo from '../asserts/images/zan-logo.svg';
 
 export const HowItWorks = () => {
   const workflowSteps = [
@@ -209,14 +209,7 @@ export const HowItWorks = () => {
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
                       >
-                        <img 
-                          src={zanLogo} 
-                          alt="ZAN" 
-                          className="h-8 object-contain mb-2"
-                        />
-                        {/* <span className="text-xs font-mono text-gray-600 dark:text-gray-300 mb-2">
-                          {feature.audit.projectName}
-                        </span> */}
+                        <img src={zanLogo} alt="ZAN" className="h-5 mb-2" />
                         <div className="flex items-center text-purple-600 dark:text-purple-400 text-xs font-semibold group-hover:scale-105 transition-transform">
                           <FaFileAlt className="mr-1" />
                           <span>Audit Report</span>
