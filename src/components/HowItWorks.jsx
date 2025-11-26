@@ -188,43 +188,41 @@ export const HowItWorks = () => {
                     {feature.description}
                   </p>
                   
-                  {/* ZAN Audit Badge Section */}
-                  {feature.isAudited && feature.audit && (
-                    <motion.a
-                      href={feature.audit.reportUrl}
-                      target="_blank"
-                      rel="noopener noreferrer" 
-                      className="block mb-6 p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-colors cursor-pointer group"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <img 
-                            src={zanLogo} 
-                            alt="ZAN" 
-                            className="h-6 object-contain"
-                          />
-                          <div className="h-4 w-px bg-purple-300 dark:bg-purple-600"></div>
-                          <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">
-                            {feature.audit.projectName}
-                          </span>
+                  <div className={`${feature.isAudited ? 'flex flex-col sm:flex-row gap-4' : ''}`}>
+                    {/* Feature list */}
+                    <div className={`grid grid-cols-1 gap-3 ${feature.isAudited ? 'flex-1' : ''}`}>
+                      {feature.features.map((item, idx) => (
+                        <div key={idx} className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                          <span className={`w-2 h-2 ${feature.isAudited ? 'bg-green-500' : 'bg-accent-500'} rounded-full mr-3`}></span>
+                          <span className="text-gray-700 dark:text-gray-200">{item}</span>
                         </div>
-                        <div className="flex items-center text-purple-600 dark:text-purple-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
-                          <FaFileAlt className="mr-1.5" />
+                      ))}
+                    </div>
+                    
+                    {/* ZAN Audit Badge Section */}
+                    {feature.isAudited && feature.audit && (
+                      <motion.a
+                        href={feature.audit.reportUrl}
+                        target="_blank"
+                        rel="noopener noreferrer" 
+                        className="flex-shrink-0 sm:w-40 p-4 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl border border-purple-200 dark:border-purple-700 hover:border-purple-400 dark:hover:border-purple-500 transition-colors cursor-pointer group flex flex-col items-center justify-center text-center"
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <img 
+                          src={zanLogo} 
+                          alt="ZAN" 
+                          className="h-8 object-contain mb-2"
+                        />
+                        {/* <span className="text-xs font-mono text-gray-600 dark:text-gray-300 mb-2">
+                          {feature.audit.projectName}
+                        </span> */}
+                        <div className="flex items-center text-purple-600 dark:text-purple-400 text-xs font-semibold group-hover:scale-105 transition-transform">
+                          <FaFileAlt className="mr-1" />
                           <span>Audit Report</span>
                         </div>
-                      </div>
-                    </motion.a>
-                  )}
-                  
-                  <div className="grid grid-cols-1 gap-3">
-                    {feature.features.map((item, idx) => (
-                      <div key={idx} className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                        <span className={`w-2 h-2 ${feature.isAudited ? 'bg-green-500' : 'bg-accent-500'} rounded-full mr-3`}></span>
-                        <span className="text-gray-700 dark:text-gray-200">{item}</span>
-                      </div>
-                    ))}
+                      </motion.a>
+                    )}
                   </div>
                 </motion.div>
               );
